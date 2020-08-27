@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- <html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/mi.css" />
+	</head>
+	<body> -->
+		<!-- 轮播图 -->
+		<div class="banner">
+			<div class="Centered">
+				<div class="list">
+					<ul>
+						<li><span>有品推荐</span> / <span>家用电器</span></li>
+						<li><span>居家餐厨</span> / <span>电视影音</span></li>
+						<li><span>家居家装</span> / <span>智能家庭</span></li>
+						<li><span>手机电脑</span> / <span>数码周边</span></li>
+						<li><span>日创文具</span> / <span>服装配饰</span></li>
+						<li><span>鞋靴箱包</span> / <span>美妆个护</span></li>
+						<li><span>运动户外</span> / <span>出行车品</span></li>
+						<li><span>健康保健</span> / <span>美食酒饮</span></li>
+						<li><span>母婴亲自</span> / <span>宠物生活</span></li>
+						<li><span>有品海购</span> / <span>DLAB</span></li>
+					</ul>
+					<div class="menu">
+						<div>
+							<!-- <h1 class="name">777</h1>
+							<dl class="dll">
+								<dt></dt>
+								<dt></dt>
+							</dl> -->
+						</div>
+						<div>
+							<!-- <h1 class="name">888</h1>
+							<dl class="dll">
+								<dt></dt>
+								<dt></dt>
+							</dl> -->
+						</div>
+					</div>
+				</div>
+				<div class="Banner">
+					<ul class="img">
+						<li><a href="#"><img src="img/banner/ia_10002.jpeg" alt="第1张图片"></a></li>
+						<li><a href="#"><img src="img/banner/ia_10003.jpeg" alt="第1张图片"></a></li>
+						<li><a href="#"><img src="img/banner/ia_10004.jpeg" alt="第1张图片"></a></li>
+						<li><a href="#"><img src="img/banner/ia_10005.jpeg" alt="第1张图片"></a></li>
+						<li><a href="#"><img src="img/banner/ia_10006.jpeg" alt="第1张图片"></a></li>
+						<li><a href="#"><img src="img/banner/ia_10007.jpeg" alt="第1张图片"></a></li>
+						<li><a href="#"><img src="img/banner/ia_10008.jpeg" alt="第1张图片"></a></li>
+					</ul>
+					<ul class="num"></ul>
+					<div class="btn">
+						<span class="prev"></span>
+						<span class="next"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- 	</body>
+</html> -->
+<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/大轮播.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		//滑动list的li
+		$(".banner .list li").hover(
+		//移入
+		function(){
+			$(".banner .menu").stop().show();
+			let index = $(this).index() * 2;
+			$.getJSON("banner.json", function(data) {
+				for(let q=0;q<2;q++){
+					if(q == 0){
+						// $(".banner .menu .name").eq(0).html(data[index].name);
+						$("<h1 class='name'>" + data[index].name + "</h1>").appendTo($(".banner .menu div").eq(0))
+						$("<dl class='dll'></dl>").appendTo($(".banner .menu div").eq(0))
+						let arrtext = data[index].text.split(",");
+						for(let w=0;w<arrtext.length;w++){
+							$("<dt>" + arrtext[w] + "</dt>").appendTo($(".banner .dll").eq(0));
+						}
+					}else{
+						// $(".banner .menu .name").eq(1).html(data[index].name);
+						$("<h1 class='name'>" + data[index].name + "</h1>").appendTo($(".banner .menu div").eq(1))
+						$("<dl class='dll'></dl>").appendTo($(".banner .menu div").eq(1))
+						let arrtext = data[index].text.split(",");
+						for(let w=0;w<arrtext.length;w++){
+							$("<dt>" + arrtext[w] + "</dt>").appendTo($(".banner .dll").eq(1));
+						}
+					}
+					index++;
+				};
+				
+			});
+		},
+		//移除
+		function(){
+			$(".banner .menu").find("h1").remove();
+			$(".banner .menu").find("dl").remove();
+			$(".banner .menu").stop().hide();
+				
+			}
+		);
+		
+		// 点击和划上span
+		//点击跳转
+		$(".banner .list span:odd").click(function(){
+			sessionStorage.x = 1.0;
+			$(location).prop('href', 'list.html')
+		});
+		$(".banner .list span:even").click(function(){
+			sessionStorage.x = 2.0;
+			$(location).prop('href', 'list.html')
+		});
+		
+		//划上
+		$(".banner .list span").hover(
+			function(){
+				$(this).css({
+					cursor: "pointer",
+					color:"#cb7601"
+				})
+			},
+			function(){
+				$(this).css({
+					cursor: "",
+					color:"#fff"
+				})
+			}
+		)
+		
+	});
+</script>

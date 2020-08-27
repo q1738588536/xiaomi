@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/mi.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fiexd.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<div id="Header"></div>
+		<!-- 车 -->
+		<div class="cart">
+			<div class="Centered">
+				<div class="tp">
+					<span>首页</span>
+					<span>></span>
+					<span>购物车</span>
+				</div>
+				<!-- 未登录 -->
+				<div class="main1">
+					<div class="img">
+						<img src="img/cart/001.png" >
+					</div>
+					<p>登录后才能看到购物车商品哦~</p>
+					<div class="lg">
+						去登录
+					</div>
+				</div>
+				<!-- 登录 -->
+				<!-- 且有商品 -->
+				<div class="main2">
+					<div class="tit">
+						<input type="checkbox" class="red all"/>
+						<span>全选</span>
+						<span>商品信息</span>
+						<span>单价</span>
+						<span>数量</span>
+						<span>金额</span>
+						<span>操作</span>
+					</div>
+					<div class="goods">
+						<p class="nine">
+							<a href="">!</a>
+							满99.00元免运费&nbsp;&nbsp;&nbsp;&nbsp;
+							<span>有品精选商品，即有品配送和第三方商家发货的商品，2018年1月1日起，单笔订单满99元免运费，不满99元收10元运费。*包邮订单拆单后若部分订单退款使得剩余订单不满足包邮条件时将补扣10元运费。</span>
+						</p>
+						<!-- <div class="good">
+							<div class="check">
+								<input type="checkbox" class="red sums"/>
+							</div>
+							<div class="img">
+								<img src="img/cart/ia_10001.png" >
+							</div>
+							<div class="txt">
+								<span>宜准智能专业跑步表 T935 黑色套装赠送黄绿 橘黄表带</span>
+							</div>
+							<div class="price">
+								￥<span>899</span>
+							</div>
+							<div class="num">
+								<span class="min">-</span>
+								<input type="text" class="numb" value="1" />
+								<span class="max">+</span>
+							</div>
+							<div class="sum">
+								￥<span class="getGoods">899</span>
+							</div>
+							<div class="del">
+								<a href="#"></a>
+							</div>
+						</div> -->
+					</div>
+					<div class="settlement">
+						<input type="checkbox" class="red all"/>
+						<span>全选</span>
+						<span>已选<b>0</b>件</span>
+						<span>去结算</span>
+						<span>￥<b>0.00</b></span>
+						<span>合计：</span>
+					</div>
+				</div>
+				<!-- 无商品 -->
+				<div class="main3">
+					<div class="main3">
+						<div class="img">
+							<img src="img/cart/002.png" >
+						</div>
+						<p>购物车还是空的</p>
+						<div class="lg">
+							继续逛
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div id="Foot"></div>
+		<!-- flexd -->
+		<div id="Flexd"></div>
+	</body>
+</html>
+<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/top.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	// 小轮播
+	$(function(){
+		//引入头部Header
+		$("#Header").load("header.html");
+		
+		//引入底部Foot
+		$("#Foot").load("foot.html");
+		
+		// 引入flexd
+		$("#Flexd").load("flexd.html");
+		
+		
+	})
+</script>
+<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>

@@ -1,0 +1,99 @@
+<!-- 头 -->
+<div class="top">
+	<div class="Centered">
+		<div class="rg">
+			<div><a href="" class="dl">登录</a><a href="" class="dl">注册</a><span>|</span></div>
+			<div><a href="">帮助中心</a><span>|</span></div>
+			<div><a href=""><span class="firstDown"></span><span class="mid"></span>下载APP</a><span>|</span></div>
+			<div><a href="">直播</a><span>|</span></div>
+			<div class="last">
+				<a href="">资质证照/协议规则</a><span class="lastDown"></span><span class="mid"></span>
+				<div>
+					<a href="">资质证照</a>
+					<a href="">协议规则</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 导航 -->
+<div class="header">
+	<div class="Centered">
+		<div class="logo">
+			<a href=""><img src="img/header/ia_10113.png"></a>
+			<a href=""></a>
+		</div>
+		<div class="text">
+			<a href="">限时抢购</a>
+			<a href="">企业采购</a>
+		</div>
+		<div class="input">
+			<div class="txt">
+				<span></span>
+				<a href=""></a>
+				<input type="text" name="" id="" value="" placeholder="搜一搜" />
+			</div>
+			<div class="car">
+				<a href=""></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	// 取消a
+	$("a").click(function(){
+		return false
+	})
+	
+	if(localStorage.userflag == 1){
+		$(".top .rg").find(".dl").eq(0).html("已登录");
+		$(".top .rg").find(".dl").eq(1).html("去注销");
+	}else{
+		$(".top .rg").find(".dl").eq(0).html("登录");
+		$(".top .rg").find(".dl").eq(1).html("注册");
+	}
+	
+	//登陆注册点击
+	//登录
+	$(".dl").eq(0).click(function(){
+		let us = localStorage.userflag;
+		console.log(us);
+		if(us == 1){
+			$(location).prop('href', 'cart.html');
+		}else{
+			$(".alert").css({
+				display:"block"
+			});
+		}
+	});
+	//会注销
+	$(".dl").eq(1).click(function(){
+		let us = localStorage.userflag;
+		console.log(us);
+		if(us == 1){
+			if($(this).html() == "去注销"){
+				localStorage.clear();
+				$(location).prop('href', 'mi.html');
+			}else{
+				$(location).prop('href', 'cart.html');
+			}
+		}else{
+			$(".alert").css({
+				display:"block"
+			});
+		}
+	});
+
+	
+	
+	//回到首页
+	$(".header .logo").find("img").click(function(){
+		$(location).prop('href', 'mi.html');
+	});
+	
+	//购物车
+	$(".header .input .car").find("a").click(function(){
+		$(location).prop('href', 'cart.html');
+	})
+</script>

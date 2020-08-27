@@ -1,0 +1,1 @@
+"use strict";$(function(){$(window).on("scroll",function(){var o=$("#Header .header"),e=$(window).scrollTop();$(window).height();400<e?o.addClass("showtopface"):o.removeClass("showtopface")})});

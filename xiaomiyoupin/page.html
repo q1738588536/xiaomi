@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/mi.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fiexd.css"/>
+		<link rel="stylesheet" type="text/css" href="css/page.css"/>
+		<link rel="stylesheet" type="text/css" href="css/alert.css"/>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<div id="Header"></div>
+		<div class="page">
+			<div class="Centered">
+				<div class="main ">
+					<div class="left">
+						<div class="banner">
+							<div class="small" id="small">
+								<img src="img/page/001.jpg" >
+								<div class="mask" id="mask">
+									
+								</div>
+							</div>
+							<div class="big" id="big">
+								<img src="img/page/001.jpg" >
+							</div>
+						</div>
+						<div class="carousel">
+							<ul>
+								<li><img src="img/page/0001.jpg" ></li>
+								<li><img src="img/page/0002.jpg" ></li>
+								<li><img src="img/page/0003.jpg" ></li>
+								<li><img src="img/page/0004.jpg" ></li>
+								<li><img src="img/page/0005.jpg" ></li>
+								<li><img src="img/page/0006.jpg" ></li>
+							</ul>
+						</div>
+					</div>
+					<div class="right">
+						<div class="name">
+							<p>宜准智能专业跑步表 T935 黑色套装赠送黄绿 橘黄表带</p>
+							<p>为跑步而生，快速定位、监测心率、虚拟兔子科学陪练、App同步</p>
+							<p>促销:<a href="">领券</a><b>140.00元宜准新品优惠券</b></p>
+						</div>
+						<div class="price">
+							<p>售价<span><b>￥</b><span id="price">899</span></p>
+							<div class="ser">
+								<div class="l">
+									服务<i>!</i>
+								</div>
+								<div class="r">
+									<span><a href=""></a>满99包邮</span>
+									<span><a href=""></a>三方店铺</span>
+									<span><a href=""></a>7天无理由</span>
+									<span><a href=""></a>有品配送</span>
+									<span>
+										<a href=""></a>
+										由小米有品提供配送服务，杭州梦栖谷仓商贸有限公司提供售后
+										<b>(查看商家资质)</b>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="select">
+							<div class="address">
+								<span>配送区域</span>
+								<select id="province" onchange="funCity()">
+									<option value="-1">请选择省份</option>
+								</select>
+								<select id="city" onchange="funCounty()">
+									<!-- <option value="-1">请选择城市</option> -->
+								</select>
+								<select id="county">
+									<option value="">请选择区县</option>
+								</select>
+								<span>有货</span>
+							</div>
+							<div class="color">
+								<span>颜色</span>
+								<span>黑色</span>
+								<!-- <span>白色</span> -->
+							</div>
+							<div class="num">
+								<b>数量</b>
+								<div class="number">
+									<span>-</span>
+									<input type="text" id="" value="1" />
+									<span>+</span>
+								</div>
+							</div>
+						</div>
+						<div class="line">
+							<span class="one">加入购物车</span>
+							<span class="one">立即购买</span>
+							<span class="two"><a href=""></a>收藏</span>
+							<span class="two"><a href=""></a>客服</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!-- 底部 -->
+		<div id="Foot"></div>
+		<!-- flexd -->
+		<div id="Flexd"></div>
+		<!-- alert弹出框 -->
+		<div id="Alert"></div>
+	</body>
+</html>
+<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/top.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	// 小轮播
+	$(function(){
+		//引入头部Header
+		$("#Header").load("header.html");
+		
+		//引入底部Foot
+		$("#Foot").load("foot.html");
+		
+		// 引入flexd
+		$("#Flexd").load("flexd.html");
+		
+		// 引入alert
+		$("#Alert").load("alert.html");
+		
+		//放大镜
+		$("#small").mouseenter(function(){
+		    $("#mask,#big").show();
+		}).mouseleave(function(){
+		    $("#mask,#big").hide();
+		}).mousemove(function(e){
+		    let l = e.pageX - $(this).offset().left - $("#mask").width()*0.5;
+		    let t = e.pageY - $(this).offset().top - $("#mask").height()*0.5;
+		    if(l <= 0){
+		        l=0;
+		    }
+		    if(l >= $(this).width()-$("#mask").width()){
+		        l=$(this).width()-$("#mask").width();
+		    }
+		    if(t <= 0){
+		        t=0;
+		    }
+		    if(t >= $(this).height()-$("#mask").height()){
+		        t=$(this).height()-$("#mask").height();
+		    }
+		
+		    $("#mask").css({
+		        left:l,
+		        top:t
+		    })
+		    
+		    let n = $("#big img").width()/$(this).width()
+		    $("#big img").css({
+		        left:-n*l,
+		        top:-n*t
+		    })
+		});
+		//小图点击切换
+		$(".carousel").find("li").click(function(){
+			
+			$(this).siblings().css({
+				border: "1px solid transparent"
+			});
+			$(this).css({
+				border: "1px solid black"
+			});
+			let index = $(this).index() + 1;
+			$("#small").find("img").attr("src","img/page/00"+ index +".jpg")
+			$("#big").find("img").attr("src","img/page/00"+ index +".jpg")
+		});
+		
+		//判断数量
+		function num(){
+			let n = $(".page .number").find("input").val();
+			//最少值
+			if(n<= 1){
+				$(".page .number").find("input").val(1);
+				$(".page .number").find("span").eq(0).css({
+					cursor: "not-allowed",
+					color: "#d6d6d6",
+				});
+			}else{
+				$(".page .number").find("span").eq(0).css({
+					cursor: "pointer",
+					color: "#845f3f",
+				});
+			}
+			//最多值
+			if(n>=10){
+				$(".page .number").find("input").val(10);
+				$(".page .number").find("span").eq(1).css({
+					cursor: "not-allowed",
+					color: "#d6d6d6",
+				})
+			}else{
+				$(".page .number").find("span").eq(1).css({
+					cursor: "pointer",
+					color: "#845f3f",
+				})
+			}
+		};
+		//初始化
+		num();
+		//减少数量
+		$(".page .number").find("span").eq(0).click(function(){
+			let m = $(this).next().val();
+			m = +m;
+			m--;
+			$(this).next().val(m);
+			num();
+		});
+		//增加数量
+		$(".page .number").find("span").eq(1).click(function(){
+			let m = $(this).prev().val();
+			m = +m;
+			m++;
+			$(this).prev().val(m);
+			num();
+		});
+	});
+	
+	
+	//地址
+	let oProvince = document.getElementById("province");
+	let oCity = document.getElementById("city");
+	let oCounty = document.getElementById("county");
+	
+	let arrProvince = ["山西", "河南", "河北","陕西"];
+	
+	let arrCity = [
+		["太原", "晋城", "运城"],
+		["郑州", "洛阳", "平顶山"],
+		["石家庄", "唐山", "张家口"],
+		["西安","渭南","咸阳","宝鸡"]
+	];
+	
+	let arrCounty = [
+		[	
+			["太原1","太原2","太原3"],
+			["晋城1","晋城2","晋城3"],
+			["运城1","运城2","运城3"]
+		],
+		[
+			["郑州1","郑州2","郑州3"],
+			["洛阳1","洛阳2","洛阳3"],
+			["洛阳1","洛阳2","洛阳3"]
+		],
+		[
+			["石家庄1","石家庄2","石家庄3"],
+			["唐山1","唐山2","唐山3"],
+			["张家口1","张家口2","张家口3"]
+		],
+		[
+			["西安1","西安2","西安3"],
+			["渭南1","渭南2","渭南3"],
+			["咸阳1","咸阳2","咸阳3"],
+			["宝鸡1","宝鸡2","宝鸡3"],
+		]
+	];
+	
+	//页面加载完成后，将省列完成
+	window.onload = function(){
+		let str;
+		for (let i = 0; i < arrProvince.length; i++) {
+			str += `<option value="${i}">${arrProvince[i]}</option>`;
+		}
+		oProvince.innerHTML += str;
+		funCity();
+	}
+	//市列
+	function funCity() {
+		//重置市列
+		oCity.innerHTML = `<option value="-1">请选择城市</option>`;
+		//省没有选择时跳出
+		let x = oProvince.value;
+		if(x == -1){
+			funCounty();
+			return 
+		}
+		//加载匹配省的市列
+		let str;
+		for (let i = 0; i < arrCity[x].length; i++) {
+			str += `<option value="${i}">${arrCity[x][i]}</option>`;
+		}
+		oCity.innerHTML += str;
+		funCounty();
+	}
+	//区县列
+	function funCounty() {
+		//重置区县列
+		oCounty.innerHTML = `<option value="">请选择区县</option>`;
+		//市没有选择时跳出
+		let x = oProvince.value;
+		let y = oCity.value;
+		if(y == -1){
+			return 
+		}
+		//匹配省和市，加载区县列
+		let str;
+		for (let i = 0; i < arrCounty[x][y].length; i++) {
+			str += `<option value="${i}">${arrCounty[x][y][i]}</option>`;
+		}
+		oCounty.innerHTML += str;
+	}
+	
+	//渲染改变
+	let al;
+	if(sessionStorage.length != 0){
+		let da = JSON.parse(sessionStorage.dat);
+		// console.log(da[0]);
+		
+		$(".name").find("p").eq(0).html(da[0].name);
+		$(".name").find("p").eq(1).html(da[0].p);
+		$("#price").html(da[0].num);
+		
+		$("#small").find("img").attr("src","img/section/ia_"  + da[0].img + ".png");
+		$("#big").find("img").attr("src","img/section/ia_"  + da[0].img + ".png");
+		$(".carousel ul").find("img").attr("src","img/section/ia_"  + da[0].img + ".png");
+		al = da[0].img;
+	}
+	// console.log(al);
+	//加入购物车
+	$(".page .one").click(function(){
+			// console.log(al);
+			let us = localStorage.userflag;
+			// console.log(us);
+			if(us == 1){
+				let user = localStorage.user;
+				let name = $(".name").find("p").eq(0).html();
+				let pirce = $("#price").html();
+				let num = $(".page .number").find("input").val();
+				let img = $("#small").find("img").attr("src");
+				let alt = al;
+				$.ajax('', {
+					url: "car.php",
+					type: 'get', //HTTP请求类型
+					data: {
+						user:user,
+						name:name,
+						pirce:pirce,
+						num:num,
+						img:img,
+						alt:al
+					},
+					success: function(data) {
+						// console.log(data);
+						$(location).prop('href', 'cart.html');
+					},
+					error: function(xhr, type, errorThrown) {
+						console.log("失败data");
+					}
+				});
+				// $(location).prop('href', 'cart.html');
+			}else{
+				$(".alert").css({
+					display:"block"
+				});
+			}
+	});
+
+		
+	
+
+</script>

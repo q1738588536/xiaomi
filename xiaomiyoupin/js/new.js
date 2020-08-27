@@ -1,0 +1,1 @@
+"use strict";$(function(){$.getJSON("./new.json",function(i){$.each(i,function(i,n){$("<li><img src='img/"+n.img+".jpg'><div class='text'><h1>"+n.text+"</h1><p>"+n.txt+"</p><p><span>￥<i>"+n.pirce+"</i></span></p></div></li>").appendTo($(".newSection ul")),$(".new_section").hd()})})});

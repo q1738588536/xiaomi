@@ -1,0 +1,72 @@
+.list {
+  background-color: #f2f2f2; }
+
+.list .tit {
+  padding-top: 30px;
+  margin-bottom: 10px;
+  font-size: 14px; }
+
+.list .tit span {
+  color: #845f3f;
+  font-size: 18px;
+  font-weight: 700; }
+
+.list .god {
+  width: 100%;
+  padding-bottom: 100px;
+  min-height: 500px; }
+
+.list .god ul {
+  width: 100%;
+  overflow: hidden; }
+
+.list .god li {
+  list-style: none;
+  float: left;
+  width: 266px;
+  padding-bottom: 10px;
+  margin-right: 4px;
+  margin-bottom: 5px;
+  text-align: center;
+  background: #fff;
+  transition: all .4s;
+  cursor: pointer; }
+
+.list .god li:hover {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0); }
+
+.list .god li .img {
+  width: 266px;
+  height: 195px;
+  font-size: 0; }
+
+.list .god li .img img {
+  width: 195px;
+  height: 195px;
+  vertical-align: middle;
+  text-align: center; }
+
+.list .god li .txt p:first-child {
+  height: 26px;
+  line-height: 26px;
+  margin-top: 10px;
+  color: #333;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.list .god li .txt p:last-child {
+  color: #a92112;
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden; }
+
+.list .god li .txt p:last-child b {
+  font-weight: normal; }
+
+.foot {
+  margin-top: 0; }
+
+/*# sourceMappingURL=list.css.map */

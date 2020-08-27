@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	font-size: 14px;
+	color: #333;
+	font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+/* 安全区 */
+.Centered {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+
+.banner .Centered {
+	height: 358px;
+	background-color: #DEB887;
+}
+
+/* 侧边栏 */
+.banner .list {
+	float: left;
+	width: 220px;
+	height: 100%;
+	background-color: #9f8052;
+}
+
+.banner .list ul {
+	margin-top: 13px
+}
+
+.banner .list li {
+	list-style: none;
+	width: 161px;
+	padding: 0 30px;
+	height: 33.2px;
+	line-height: 33.2px;
+	color: #fff;
+	font-size: 14px;
+}
+
+/* 轮播图 */
+.banner .Banner {
+	width: 860px;
+	height: 358px;
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+.banner .Banner ul{
+	list-style: none;
+}
+/* 大图 */
+.banner .Banner .img {
+	position: absolute;
+	top: 0;
+	left: 0
+}
+.banner .Banner .img li {
+	float: left;
+	font-size: 0;
+}
+.banner .Banner img {
+	width: 860px;
+	height: 358px;
+}
+/* 下边小圆点 */
+.banner .Banner .num {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+}
+.banner .Banner .num li {
+	width: 8px;
+	height: 8px;
+	background: #FFFFFF;
+	border-radius: 100%;
+	display: inline-block;
+	margin: 0 5px;
+	cursor: pointer;
+	border: 2px transparent solid;
+	transition: all 0.5s; 
+}
+.banner .Banner .num .active {
+	background-color: grey;
+	border: 2.5px #E7E7E7 solid;
+}
+/* 左右按钮 */
+.banner .Banner .btn span {
+	display: block;
+	text-align: center;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.banner .Banner .btn .prev {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -19px;
+	background: url(../img/jl.png) no-repeat 0 -1940px;
+	cursor: pointer;
+}
+.banner .Banner .btn .next {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -19px;
+	background: url(../img/jl.png) no-repeat 0 -1856px;
+}
+

@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+		<link rel="stylesheet" type="text/css" href="css/alert.css"/>
+        <style>
+            #box{
+                width: 350px;
+                height: 400px;
+                background: skyblue;
+                position:absolute;
+                display: none;
+            }
+        </style>
+    </head>
+    <body> -->
+        <!-- <button>打开</button>
+        <div id="box">
+            
+        </div> -->
+		<div class="alert">
+			<div class="lay">
+				<div class="main">
+				<div class="del">
+					<a href=""></a>
+				</div>
+				<div class="tet">
+					<h1>声明与政策</h1>
+					<p>欢迎您来到小米有品！</p>
+					
+					我们依据最新法律法规要求，制定并更新了<a href="">《隐私政策》</a>、
+					<a href="">《小米有品用户协议》</a>以及<a href="">《小米账号使用协议》</a>。
+					<p>您需阅读并同意相关政策条款方可进行登录。</p>
+					<div class="click">
+						<span>同意并继续</span>
+						<span>不同意</span>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+<!--    </body>
+</html> -->
+<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		//del关闭
+		$(".alert .del").find("a").click(function(){
+			$(".alert").css({
+				display:"none"
+			});
+			return false
+		});
+		//
+		$(".alert .click").find("span").eq(0).click(function(){
+			$(location).prop('href', 'logIn.html')
+			return false
+		});
+		$(".alert .click").find("span").eq(1).click(function(){
+			$(".alert").css({
+				display:"none"
+			});
+			return false
+		});
+	})
+</script>

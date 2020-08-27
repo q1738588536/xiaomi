@@ -1,0 +1,1 @@
+"use strict";$(function(){var i=$(".kill_section .left i"),s=($(".kill_section .left span").eq(0),$(".kill_section .left span").eq(1)),c=$(".kill_section .left span").eq(2);function o(t){return t<10?"0"+t:t}setInterval(function(){var t=new Date,e=o(t.getHours()),n=o(59-t.getMinutes()),l=o(59-t.getSeconds());i.html(e+":00场"),s.html(n),c.html(l)},1e3)});

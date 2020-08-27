@@ -1,0 +1,1 @@
+"use strict";$(function(){$.getJSON("./kill.json",function(i){$.each(i,function(i,n){$("<li><img src='img/"+n.img+".jpg'><div class='text'><h1>"+n.text+"</h1><p><span>￥<i>"+n.pirce+"</i></span><span>￥<b>"+n.oldPrice+"</b></span></p></div></li>").appendTo($(".killSection ul")),$(".kill_section").hd()})})});

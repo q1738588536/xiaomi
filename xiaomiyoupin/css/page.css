@@ -1,0 +1,373 @@
+/* 主体，图片和参数 */
+.page .main{
+	width: 100%;
+	min-height: 500px;
+	padding-top: 60px;
+	padding-bottom: 100px;
+	margin-bottom: 100px;
+	border-top: 1px solid #e7e7e7;
+}
+/* 左图部分 */
+/* 大图 */
+.page .main .left{
+	margin-right: 46px;
+	width: 465px;
+	height: 374px;
+	float: left;
+}
+.page .main .left .banner{
+	width: 372px;
+	height: 372px;
+	background-color: #f4f4f4;
+	border: 1px solid #ececec;
+	float: left;
+	font-size: 0;
+	position: relative;
+}
+.page .main .left .banner .small{
+	width: 372px;
+	height: 372px;
+	position: absolute;
+}
+.page .main .left .banner .small img{
+	width: 372px;
+	height: 372px;
+	position: absolute;
+}
+/* mask */
+.page .main .left .banner .mask{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	background-color: red;
+	opacity: 0.4;
+	top: 0;
+	display: none;
+}
+.page .main .left .banner .big{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	top: 0;
+	left: 480px;
+	overflow: hidden;
+	display: none;
+}
+.page .main .left .banner .big img{
+	width: 930px;
+	height: 930px;
+	position: absolute;
+}
+/* 小图 */
+.page .main .left .carousel{
+	float: left;
+	margin-left: 5px;
+	height: 374px;
+}
+.page .main .left .carousel ul{
+	width: 85px;
+	height: 100%;
+	overflow: hidden;
+}
+.page .main .left .carousel li{
+	list-style: none;
+	width: 83px;
+	height: 83px;
+	margin-bottom: 11px;
+	background-color: #f4f4f4;
+	overflow: hidden;
+	font-size: 0;
+	border: 1px solid transparent;
+}
+.page .main .left .carousel li:first-child{
+	border: 1px solid black;
+}
+.page .main .left .carousel li img{
+	width: 100%;
+	height: 100%;
+}
+/* 右字部分 */
+.page .main .right{
+	width: 561px;
+	float: left;
+	
+}
+/* name部分 */
+.page .right .name p:nth-of-type(1){
+	line-height: 26px;
+	font-size: 20px;
+	color: #333;
+}
+.page .right .name p:nth-of-type(2){
+	width: 84%;
+	line-height: 18px;
+	font-size: 12px;
+	color: #999;
+}
+.page .right .name p:nth-of-type(3){
+	width: 84%;
+	line-height: 18px;
+	font-size: 12px;
+	color: #999;
+}
+.page .right .name p:nth-of-type(3) a{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	padding: 0 5px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	border: 1px solid #c00002;
+	color: #c00000;
+	margin-right: 6px;
+	font-size: 12px;
+	cursor: pointer;
+}
+.page .right .name p:nth-of-type(3) b{
+	color: #333;
+	font-size: 12px;
+	font-weight: normal;
+}
+/* price部分 */
+.page .right .price{
+	margin-bottom: 26px;
+	padding: 10px;
+	background-color: #f9f9f9;
+	margin-top: 30px;
+}
+.page .right .price p{
+	margin-top: 12px;
+	margin-bottom: 12px;
+	height: 37px;
+	overflow: hidden;
+	vertical-align: bottom;
+	line-height: 40px;
+	font-size: 12px;
+}
+.page .right .price p b{
+	font-weight: normal;
+	margin-right: 3px;
+	font-size: 14px;
+	vertical-align: 0;
+	color: #c00000;
+	line-height: 30px;
+	margin-left: 33px;
+}
+.page .right .price p span{
+	font-size: 30px;
+	vertical-align: 0;
+	color: #c00000;
+	line-height: 30px;
+}
+.page .right .price .ser{
+	background-color: #f9f9f9;
+}
+.page .right .price .l{
+	margin-bottom: 12px;
+	height: 37px;
+	overflow: hidden;
+	vertical-align: bottom;
+	font-size: 12px;
+	float: left;
+}
+.page .right .price .l i{
+	display: inline-block;
+	box-sizing: border-box;
+	margin-top: 9px;
+	border: 1px solid #c00000;
+	border-radius: 50%;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	text-align: center;
+	font-size: 10px;
+	color: #c00000;
+	cursor: pointer;
+	margin-right: 20px;
+	font-style: normal;
+	margin-left: 5px;
+}
+.page .right .price .r{
+	width: 490px;
+	/* float: left; */
+	margin-top: 15px;
+}
+.page .right .price .r span{
+	/* float: left; */
+	overflow: hidden;
+	min-height: 24px;
+	margin-right: 13px;
+	line-height: 24px;
+	font-size: 16px;
+}
+.page .right .price .r a{
+	display: inline-block;
+	margin-right: 5px;
+	width: 16px;
+	height: 16px;
+	box-sizing: content-box;
+	background-position: 0 -231px;
+	background-image: url(../img/jl.png);
+}
+.page .right .price .r span b{
+	margin-left: 8px;
+	line-height: 16px;
+	color: #9f8052;
+	font-weight: normal;
+}
+/* select区域 */
+/* 地址 */
+.page .select .address span:nth-of-type(1){
+	margin-right: 10px;
+	width: 48px;
+	font-size: 12px;
+	font-weight: 400;
+}
+.page .select .address option{
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 400;
+}
+/* 属性 */
+.page .select .color{
+	margin-top: 20px;
+}
+.page .select .color span{
+	border: 1px solid #845f3f;
+	margin-right: 14px;
+	box-sizing: border-box;
+	padding: 4px 20px;
+	color: #845f3f;
+	line-height: 22px;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 14px;
+	text-align: left;
+}
+.page .select .color span:first-child{
+	border: none;
+	color: #333333;
+	text-align: left;
+	padding: 0;
+	margin-right: 35px;
+	width: 48px;
+	font-size: 12px;
+	font-weight: 400;
+}
+.page .select .num{
+	margin-top: 20px;
+	height: 32px;
+	margin-bottom: 30px;
+}
+.page .select .num b{
+	font-weight: normal;
+	padding: 0;
+	margin-right: 38px;
+	font-size: 12px;
+	font-weight: 400;
+	float: left;
+	line-height: 30px;
+}
+.page .select .num .number span{
+	float: left;
+	display: block;
+	width: 34px;
+	height: 30px;
+	border: 1px solid #d6d6d6;
+	line-height: 28px;
+	text-align: center;
+	color: #d6d6d6;
+	cursor: pointer;
+	font-size: 24px;
+	/* cursor: not-allowed; */
+}
+.page .select .num .number input{
+	float: left;
+	height: 30px;
+	width: 60px;
+	line-height: 28px;
+	text-align: center;
+	outline: none;
+	padding: 0;
+	border: 1px solid #d6d6d6;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-left-width: 0;
+	border-right-width: 0;
+	font-weight: 700;
+	font-size: 14px;
+	color: #333;
+}
+
+/* 加入购物车 */
+.page .line{
+	margin-top: 50px;
+	text-align: left;
+	margin-bottom: 100px;
+}
+.page .line .one{
+	display: inline-block;
+	border-radius: 2px;
+	text-align: center;
+	color: #666;
+	border: 1px solid #666;
+	min-width: 167px;
+	height: 52px;
+	line-height: 50px;
+	font-size: 20px;
+	margin-right: 15px;
+}
+.page .line .one:first-child{
+	color: #fff;
+	background-color: #845f3f;
+	border-color: #845f3f;
+}
+.page .line .one:first-child:hover{
+	color: #fff;
+	background-color: #d1bfa6;
+	border-color: #d1bfa6;
+}
+.page .line .two{
+	display: inline-block;
+	width: 54px;
+	height: 54px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	color: #999;
+	line-height: 12px;
+	text-align: center;
+	font-size: 12px;
+	padding: 7px;
+	box-sizing: border-box;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.page .line span:nth-of-type(3) a{
+	vertical-align: middle;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-position: 0 -930px;
+	background-image: url(../img/jl.png);
+}
+.page .line span:nth-of-type(4) a{
+	vertical-align: middle;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-position: 0 -1576px;
+	background-image: url(../img/jl.png);
+}
+.page .line span:hover{
+	color: #fff;
+	background-color: #845f3f;
+	border-color: #845f3f;
+	cursor: pointer;
+}
+.page .line span:nth-of-type(3):hover a{
+	background-position: 0 -1712px;
+}
+.page .line span:nth-of-type(4):hover a{
+	background-position: 0 -1542px;
+}

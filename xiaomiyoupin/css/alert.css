@@ -1,0 +1,92 @@
+/* 弹出框 */
+.alert .lay{
+	position: fixed;
+	font-size: 14px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background: rgba(0,0,0,.7);
+}
+.alert .main{
+	width: 370px;
+	height: 200px;
+	position:absolute;
+	/* margin: 300px 500px; */
+	top: 25%;
+	left: 35%;
+	padding: 50px 40px 40px;
+	background: #fff;
+}
+/* del删除 */
+.alert .del{
+	text-align: right;
+}
+.alert .del a{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-position: 0 -135px;
+	background-image: url(../img/jl.png);
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.alert .del a:hover{
+	background-position: 0 -118px;
+}
+/* tet部分 */
+.alert .tet h1{
+	font-weight: normal;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.alert .tet a{
+	text-decoration: none;
+	color: #9f8052;
+}
+/* click选择 */
+.alert .tet .click{
+	margin-top: 20px;
+}
+.alert .tet .click span{
+	display: inline-block;
+	border-radius: 2px;
+	text-align: center;
+	color: #845f3f;
+	border: 1px solid #845f3f;
+	    border-top-color: rgb(132, 95, 63);
+	    border-right-color: rgb(132, 95, 63);
+	    border-bottom-color: rgb(132, 95, 63);
+	    border-left-color: rgb(132, 95, 63);
+	box-sizing: border-box;
+	padding: 0 6px;
+	transition: all .5s cubic-bezier(0,1,.5,1);
+	width: 179px;
+	height: 43px;
+	line-height: 41px;
+	font-size: 18px;
+}
+.alert .tet .click span:first-child{
+	color: #fff;
+	background-color: #845f3f;
+	border-color: #845f3f;
+}
+.alert .tet .click span:first-child:hover{
+	color: #fff;
+	background-color: #d1bfa6;
+	border-color: #d1bfa6;
+	cursor: pointer;
+}
+.alert .tet .click span:last-child:hover{
+	color: #fff;
+	background-color: #845f3f;
+	border-color: #845f3f;
+	cursor: pointer;
+}
+.alert{
+	display: none;
+}
